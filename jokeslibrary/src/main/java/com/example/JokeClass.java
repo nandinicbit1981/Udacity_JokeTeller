@@ -8,4 +8,6 @@ public class JokeClass {
     public static String getJoke() {
         return "This is a joke";
     }
+
+
 }
