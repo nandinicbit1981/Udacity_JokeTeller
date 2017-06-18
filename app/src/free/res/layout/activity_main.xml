@@ -1,0 +1,41 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/instructions_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/instructions_text_view"
+            android:onClick="tellJoke"
+            android:text="@string/button_text"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_height="100dp">
+        <FrameLayout
+            android:id="@+id/ads_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
