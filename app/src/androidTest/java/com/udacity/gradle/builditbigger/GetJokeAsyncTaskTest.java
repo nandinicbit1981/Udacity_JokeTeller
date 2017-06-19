@@ -18,13 +18,11 @@ public class GetJokeAsyncTaskTest {
 
     @Test
     public void testVerifyEchoResponse() {
-       // assertEquals("hello", "hello");
         final EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
         MainActivity mainActivity = rule.getActivity();
         endpointsAsyncTask.execute(mainActivity);
         try {
             Thread.sleep(5000);
-            System.out.println("poraaaaa^^^^^^^^^^^^^^^^^^^^^^^^");
             assertTrue(mainActivity.joke.length() > 0);
         } catch (InterruptedException e) {
             e.printStackTrace();
