@@ -48,22 +48,25 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    testCompile 'junit:junit:4.12'
 
     compile project(':jokeslibrary')
     compile project(':jokedisplay')
-    compile 'com.android.support:appcompat-v7:25.0.0'
     freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
+    compile 'com.android.support:support-annotations:25.0.0'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile project(path: ':jokesBackend', configuration: 'android-endpoints')
     compile 'com.google.http-client:google-http-client-android:1.22.0'
     compile 'com.google.api-client:google-api-client:1.22.0'
     compile 'com.google.api-client:google-api-client-android:1.22.0'
     testCompile 'junit:junit:4.12'
+
     androidTestCompile 'com.android.support:support-annotations:25.0.0'
-    androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile 'com.android.support.test:rules:0.5'
-    androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2'
+    androidTestCompile 'junit:junit:4.12'
 }

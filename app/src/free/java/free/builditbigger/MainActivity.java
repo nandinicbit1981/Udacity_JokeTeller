@@ -1,6 +1,7 @@
 package free.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -18,6 +19,7 @@ import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.R;
+import com.udacity.gradle.jokedisplay.JokeActivity;
 
 import java.io.IOException;
 
@@ -58,6 +60,10 @@ class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(context, JokeActivity.class);
+        intent.putExtra(JokeActivity.JOKE_KEY, result);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }
 public class MainActivity extends AppCompatActivity {
