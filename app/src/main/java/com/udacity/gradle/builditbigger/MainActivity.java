@@ -11,6 +11,10 @@ import com.example.JokeClass;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
+    public String joke = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
